@@ -1,29 +1,38 @@
-# 🎬 Movies App
+# Movies Discovery App
 
-A modern, clean, and interactive Flutter application to discover and watch movie trailers. Built with Clean Architecture, BLoC, and Provider, this app demonstrates best practices in Flutter development.
+A modern, clean, and interactive Flutter application to discover and watch movie trailers. Built with Clean Architecture, BLoC, and Provider, this app demonstrates scalable best practices in Flutter mobile development.
 
 ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-## ✨ Features
+---
 
-- **Movie Discovery**: Browse popular, top-rated, and upcoming movies.
-- **Detailed Information**: View movie descriptions, ratings, and release dates.
-- **Trailer Playback**: Watch movie trailers directly within the app using the integrated YouTube player.
-- **State Management**: Robust state handling using `flutter_bloc` and `provider`.
-- **Clean Architecture**: Separation of concerns using Domain, Data, and Presentation layers with `get_it` and `dartz`.
-- **Offline Caching**: Fast image loading with `cached_network_image` and local preferences with `shared_preferences`.
+## Features
 
-## 🛠️ Tech Stack
+- **Movie Discovery**: Browse popular, top-rated, and upcoming movies from TMDb.
+- **Detailed Information**: View comprehensive movie overviews, ratings, and release schedules.
+- **Trailer Playback**: Stream movie trailers seamlessly within the app via YouTube integration.
+- **Robust State Management**: Predictable UI state handling using `flutter_bloc` and `provider`.
+- **Clean Architecture**: Decoupled Domain, Data, and Presentation layers powered by `get_it` (Dependency Injection) and `dartz` (Functional Error Handling).
+- **Offline Caching**: High-performance image caching with `cached_network_image` and persistent local settings via `shared_preferences`.
 
-- **Framework**: Flutter
-- **State Management**: `flutter_bloc`, `provider`
-- **Architecture**: Clean Architecture, Dependency Injection (`get_it`), Functional Programming (`dartz`, `equatable`)
-- **Networking**: `http`
-- **Video Player**: `youtube_player_flutter`, `video_player`
-- **UI Components**: `cupertino_icons`, `flutter_rating_bar`, custom fonts (Poppins).
+---
 
-## 🚀 Getting Started
+## Tech Stack
+
+- **Framework**: Flutter SDK (v3.5+) & Dart
+- **State Management**: BLoC / Cubit, Provider
+- **Architecture**: 3-Tier Clean Architecture (Presentation, Domain, Data)
+- **Dependency Injection**: `get_it`
+- **Functional Programming & Error Handling**: `dartz`, `equatable`
+- **Networking & API**: TMDb REST API with `http`
+- **Media Playback**: `youtube_player_flutter`, `video_player`
+- **UI Components**: Custom themes, Material 3, Poppins typography, `flutter_rating_bar`
+
+---
+
+## Getting Started
 
 ### Prerequisites
 - Flutter SDK (^3.5.0)
@@ -48,11 +57,20 @@ A modern, clean, and interactive Flutter application to discover and watch movie
    flutter run
    ```
 
-## 📂 Project Structure
-The project strictly follows **Clean Architecture** principles to ensure maintainability, scalability, and testability.
+---
 
-## 🤝 Contributing
-Contributions, issues, and feature requests are welcome!
+## Project Structure
 
-## 📝 License
+```
+lib/
+├── core/             # Network info, error handlers, shared constants & utilities
+├── data/             # Data sources (remote/local), models, and repository implementations
+├── domain/           # Business logic, entities, and repository contracts (interfaces)
+└── presentation/     # BLoC state management, screens, and reusable widgets
+```
+
+---
+
+## License
+
 This project is licensed under the [MIT License](LICENSE).
